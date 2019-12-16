@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-     <p>Development branch created</p>
+     <p>Feature branch created</p>
     </div>
   );
 }
