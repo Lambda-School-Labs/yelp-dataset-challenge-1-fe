@@ -39,13 +39,13 @@ class Register extends Component {
       return(
           <div className="ui container">
             <h2>Registration Page</h2>
-            <Link to="/login">Login here.</Link> 
+            <Link to="/login">Login here.</Link>
             <div className="ui placeholder segment">
               <form className="ui form" onSubmit={this.onSubmit}>
                 <div className="field">
                   <label>First Name</label>
                   <div className="ui left icon input">
-                    <input 
+                    <input
                       id="first_name"
                       type="text"
                       name="first_name"
@@ -73,7 +73,7 @@ class Register extends Component {
                 {/* <div className="field">
                   <label>Company Name</label>
                   <div className="ui left icon input">
-                    <input 
+                    <input
                       id="company"
                       type="text"
                       name="company"

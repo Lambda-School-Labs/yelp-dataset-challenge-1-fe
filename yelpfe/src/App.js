@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import PrivateRoute from './store/auth/PR';
+// import PrivateRoute from './store/auth/PR';
 import { connect } from "react-redux";
 import { readInfo } from './store/actions'
 
@@ -74,7 +74,7 @@ componentWillUnmount() {
             <Route exact path="/register" component={Register}/>
             <Route exact path="/login" component={Login}/>
             <Route exact path="/" component={Home} />
-            <PrivateRoute exact path="/dashboard" component={Dashboard} />
+            <Route exact path="/dashboard" component={Dashboard} />
           </>
         </div>
       </Router>

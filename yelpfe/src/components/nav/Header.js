@@ -84,7 +84,7 @@ export class Header extends Component {
           <>
           <div className="header-bar container">
             <Link to={`/`}>
-              <h2>Product Queue</h2>
+              <h2>Yelpie</h2>
             </Link>
               <div className="nav">
                 <Link to="/dashboard">
