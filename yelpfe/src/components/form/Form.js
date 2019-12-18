@@ -5,7 +5,7 @@ function Form(props){
           <div className="ui placeholder segment">
             <form className="ui form" onSubmit={props.updateProject}>
               <div className="field">
-                <label htmlFor="project_name">Project Name: </label>
+                <label htmlFor="project_name">Review Text: </label>
                 <div className="ui left icon input">
                   <input
                     type="text"

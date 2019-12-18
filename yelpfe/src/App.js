@@ -6,6 +6,7 @@ import { readInfo } from './store/actions'
 
 // components
 import Header from './components/nav/Header';
+import Footer from './components/nav/Footer'
 
 import Login from './pages/Login';
 import Register from './pages/Register';
@@ -76,6 +77,7 @@ componentWillUnmount() {
             <Route exact path="/" component={Home} />
             <Route exact path="/dashboard" component={Dashboard} />
           </>
+          <Footer/>
         </div>
       </Router>
     );
