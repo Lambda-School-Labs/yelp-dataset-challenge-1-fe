@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import PrivateRoute from './store/auth/PR';
 import { connect } from "react-redux";
 import { readInfo } from './store/actions';
-import './app.css';
+import './App.css';
 
 // components
 import Header from './components/nav/Header';

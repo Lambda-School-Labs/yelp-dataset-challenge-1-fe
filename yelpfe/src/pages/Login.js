@@ -23,7 +23,7 @@ class Login extends Component {
 
   loginAttempt = e => {
     e.preventDefault();
-    console.log("login attempt", this.state.credentials)
+    localStorage.setItem("email", this.state.credentials.email);
     this.props
       .login(this.state.credentials)
       .then(() => {
