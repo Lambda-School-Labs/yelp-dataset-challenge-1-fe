@@ -6,12 +6,12 @@ function Form(props){
           <div className="form-wrapper">
             <form className="form" onSubmit={props.updateProject}>
               <div className="field">
-                <label className="label" htmlFor="project_name">Review Text: </label>
+                <label className="label" htmlFor="project">Review Text: </label>
                 <div className="ui left icon input">
                   <input
                     className="input-text"
                     type="text"
-                    id="project_name"
+                    id="project"
                     name={props.project}
                     onChange={props.changeHandler}
                     defaultValue={props.project}

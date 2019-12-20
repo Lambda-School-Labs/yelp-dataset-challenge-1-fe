@@ -74,14 +74,14 @@ export class Footer extends Component {
             </Link>
             <div className="footer-links">
               <Link to={`/register`}>
-                <a className="ui red">Register</a>
+                <h4 className="ui red">Register</h4>
               </Link>
               <Link to={`/login`}>
-                <a className="ui red">Login</a>
+                <h4 className="ui red">Login</h4>
               </Link>
               <Link to="/dashboard">
-                  <a className="ui red">Dashboard</a>
-                </Link>
+                <h4 className="ui red">Dashboard</h4>
+              </Link>
             </div>
           </div>
         ) : (
@@ -92,15 +92,15 @@ export class Footer extends Component {
             </Link>
               <div className="footer">
                 <Link to="/dashboard">
-                  <a className="ui red">Dashboard</a>
+                  <h4 className="ui red">Dashboard</h4>
                 </Link>
                 {/* <Link to={`/settings`}>
-                  <a className="ui red">Settings</a>
+                  <h4 className="ui red">Settings</h4>
                 </Link> */}
                 <Link to={`/login`}>
-                  <a className="ui red" onClick={this.Logout}>
+                  <h4 className="ui red" onClick={this.Logout}>
                     Logout
-                  </a>
+                  </h4>
                 </Link>
               </div>
             </div>
