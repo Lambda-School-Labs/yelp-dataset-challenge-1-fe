@@ -19,7 +19,7 @@ export const LOGOUT_SUCCESS = 'LOGOUT_SUCCESS'
 export const register = creds => dispatch => {
   dispatch({ type: REGISTER_START })
   return axios
-    .post(`${URL}/api/users/register`, creds)
+    .post(`${URL}/api/register`, creds)
     .then(res => {
       console.log("register actions resdata",res.data)
       localStorage.setItem('token', res.data.token)
@@ -34,8 +34,9 @@ export const register = creds => dispatch => {
 
 export const login = creds => dispatch => {
   dispatch({ type: LOGIN_START })
+  console.log("Login Action data", creds)
   return axios
-    .post(`${URL}/api/users/login`, creds)
+    .post(`${URL}/api/login`, creds)
     .then(res => {
       console.log("login actions resdata",res.data)
       localStorage.setItem('token', res.data.token)

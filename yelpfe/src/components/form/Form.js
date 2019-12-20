@@ -1,13 +1,15 @@
-import React from 'react'
+import React from 'react';
+import './form.css';
 function Form(props){
     return (
       <>
-          <div className="ui placeholder segment">
-            <form className="ui form" onSubmit={props.updateProject}>
+          <div className="form-wrapper">
+            <form className="form" onSubmit={props.updateProject}>
               <div className="field">
-                <label htmlFor="project_name">Review Text: </label>
+                <label className="label" htmlFor="project_name">Review Text: </label>
                 <div className="ui left icon input">
                   <input
+                    className="input-text"
                     type="text"
                     id="project_name"
                     name={props.project}

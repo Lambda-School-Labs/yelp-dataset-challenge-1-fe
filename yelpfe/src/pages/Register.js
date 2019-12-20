@@ -6,10 +6,12 @@ import { register } from '../store/actions';
 class Register extends Component {
   state = {
     credentials: {
-      email: '',
+      username: '',
       password: '',
-      firstName: '',
-      lastName: '',
+      role: '',
+      name: '',
+      phone: '',
+      email: ''
     }
   }
 
@@ -43,47 +45,61 @@ class Register extends Component {
             <div className="ui placeholder segment">
               <form className="ui form" onSubmit={this.onSubmit}>
                 <div className="field">
-                  <label>First Name</label>
+                  <label>Username</label>
                   <div className="ui left icon input">
                     <input
-                      id="first_name"
+                      id="username"
                       type="text"
-                      name="first_name"
-                      placeholder="First Name"
-                      value={this.state.credentials.first_name}
+                      name="username"
+                      placeholder="Username"
+                      value={this.state.credentials.username}
                       onChange={this.handleChange}
                     />
                     <i aria-hidden="true" className="user icon"></i>
                   </div>
                 </div>
                 <div className="field">
-                  <label>Last Name</label>
+                  <label>Password</label>
                   <div className="ui left icon input">
                     <input 
-                      id="last_name"
+                      id="password"
                       type="text"
-                      name="last_name"
-                      placeholder="Last Name"
-                      value={this.state.credentials.last_name}
+                      name="password"
+                      placeholder="Password"
+                      value={this.state.credentials.password}
                       onChange={this.handleChange}
                     />
                     <i aria-hidden="true" className="user icon"></i>
                   </div>
                 </div>
-                {/* <div className="field">
-                  <label>Company Name</label>
+                <div className="field">
+                  <label>Name</label>
                   <div className="ui left icon input">
                     <input
-                      id="company"
+                      id="name"
                       type="text"
-                      name="company"
-                      placeholder="Company Name"
-                      value={this.state.credentials.company}
+                      name="name"
+                      placeholder="Name"
+                      value={this.state.credentials.name}
                       onChange={this.handleChange}
                     />
                     <i aria-hidden="true" className="building icon"></i>
                   </div>
-                </div> */}
+                </div>
+                 <div className="field">
+                  <label>Phone</label>
+                  <div className="ui left icon input">
+                    <input 
+                      id="phone"
+                      type="phone"
+                      name="phone"
+                      placeholder="Phone"
+                      value={this.state.credentials.phone}
+                      onChange={this.handleChange}
+                    />
+                    <i aria-hidden="true" className="lock icon"></i>
+                  </div>
+                </div>
                 <div className="field">
                   <label>Email</label>
                   <div className="ui left icon input">
@@ -98,21 +114,7 @@ class Register extends Component {
                     <i aria-hidden="true" className="address card icon"></i>
                   </div>
                 </div>
-                <div className="field">
-                  <label>Password</label>
-                  <div className="ui left icon input">
-                    <input 
-                      id="password"
-                      type="password"
-                      name="password"
-                      placeholder="Password"
-                      value={this.state.credentials.password}
-                      onChange={this.handleChange}
-                    />
-                    <i aria-hidden="true" className="lock icon"></i>
-                  </div>
-                </div>
-                <button className="ui red button">Register</button>
+               <button className="ui red button">Register</button>
               </form>
             </div>
           </div>

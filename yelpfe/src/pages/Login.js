@@ -23,6 +23,7 @@ class Login extends Component {
 
   loginAttempt = e => {
     e.preventDefault();
+    console.log("login attempt", this.state.credentials)
     this.props
       .login(this.state.credentials)
       .then(() => {
@@ -39,7 +40,7 @@ class Login extends Component {
             <div className="ui placeholder segment">
               <form className="ui form" onSubmit={this.loginAttempt}>
                 <div className="field">
-                  <label>Username</label>
+                  <label>Email</label>
                   <div className="ui left icon input">
                     <input 
                       id="email"

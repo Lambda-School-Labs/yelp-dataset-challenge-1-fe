@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { logout } from "../../store/actions";
 import { connect } from "react-redux";
+import './header.css'
 
 export class Header extends Component {
   state = {

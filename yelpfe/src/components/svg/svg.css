@@ -3,12 +3,12 @@
   }
   
   svg {
-    height:300px;
-    width: 300px;
+    height:200px;
+    width: 200px;
   }
   .circle-chart {
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
   }
   .circle-chart-circle {
     animation: circle-chart-fill 4s reverse;
@@ -24,6 +24,7 @@
   }
   .chart-number {
     font-size: 0.6em;
+    color: hsl(0, 72%, 48%);
     line-height: 1;
     text-anchor: middle;
     -moz-transform: translateY(-0.25em);
@@ -33,6 +34,7 @@
   }
   .chart-label {
     font-size: 0.2em;
+    color: hsl(0, 72%, 48%);
     /* text-transform: uppercase; */
     text-anchor: middle;
     -moz-transform: translateY(0.7em);

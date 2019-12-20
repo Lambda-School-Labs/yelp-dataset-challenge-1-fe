@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { logout } from "../../store/actions";
 import { connect } from "react-redux";
+import './footer.css'
 
 export class Footer extends Component {
   state = {
@@ -71,13 +72,16 @@ export class Footer extends Component {
             <Link to={`/`}>
               <h2>Yelpie</h2>
             </Link>
-            <div className="nav">
+            <div className="footer-links">
               <Link to={`/register`}>
                 <a className="ui red">Register</a>
               </Link>
               <Link to={`/login`}>
                 <a className="ui red">Login</a>
               </Link>
+              <Link to="/dashboard">
+                  <a className="ui red">Dashboard</a>
+                </Link>
             </div>
           </div>
         ) : (
@@ -86,13 +90,13 @@ export class Footer extends Component {
             <Link to={`/`}>
               <h2>Yelpie</h2>
             </Link>
-              <div className="nav">
+              <div className="footer">
                 <Link to="/dashboard">
                   <a className="ui red">Dashboard</a>
                 </Link>
-                <Link to={`/settings`}>
+                {/* <Link to={`/settings`}>
                   <a className="ui red">Settings</a>
-                </Link>
+                </Link> */}
                 <Link to={`/login`}>
                   <a className="ui red" onClick={this.Logout}>
                     Logout
