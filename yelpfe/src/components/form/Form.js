@@ -1,6 +1,7 @@
 import React from 'react';
 import './form.css';
 function Form(props){
+  console.log("form props are", props.projects)
     return (
       <>
           <div className="form-wrapper">
@@ -11,10 +12,10 @@ function Form(props){
                   <input
                     className="input-text"
                     type="text"
-                    id="project"
-                    name={props.project}
+                    id="review"
+                    name={props.projects.review}
                     onChange={props.changeHandler}
-                    defaultValue={props.project}
+                    defaultValue={props.projects.review}
                     // disabled={props.disabled}
                   />
                   <i aria-hidden="true" className="briefcase icon" />
@@ -26,7 +27,7 @@ function Form(props){
                 </button>
                 {/* <button className="ui red button" onClick={this.deleteProject}>
                   Delete
-                </button> */}
+                </button> */} 
               </div>
             </form>
           </div>

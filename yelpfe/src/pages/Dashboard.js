@@ -13,49 +13,52 @@ class Dashboard extends Component {
         super(props);
         this.state = {
           disabled: false,
-          project: [],
-          prediction: {
-            Totalvotes: 37,
-            Helpfulvotes: 15,
-            Funnyvotes: 3}
+          project:[],
+          review: 'das me',
+          Total: 37,
+          Helpful: 15,
+          Funny: 3,
+          Useful: 8
         };
       }
 
       componentDidMount() {
-        this.setState({ project: this.state.project });
+        this.setState({ project: this.state.project.review });
       }
 
       updateProject = e => {
-        const prediction = this.state.prediction;
+        const prediction = this.state.project.reviews.prediction;
         const useremail = localStorage.getItem("email");
-        const newInfo = this.state.project;
+        const newInfo = this.state.project.review;
         e.preventDefault();
-        this.props.updateProjectInfo(useremail, newInfo, prediction);
-        this.setState({
-          disabled: true
-        });
+        // this.props.updateProjectInfo(useremail, newInfo, prediction);
+        // this.setState({
+        //   review: {
+        //     ...this.state.projects.reviews,
+        //     project: e.target.value
+        //   }
+        // });
       };
 
       changeHandler = e => {
+        console.log("NAME",[e.target.id],"Value",[e.target.value])
         this.setState({
-          project: {
-            ...this.state.project,
-            [e.target.name]: e.target.value
-          }
+            review: e.target.value
         });
+        console.log("STATE",this.state)
       };
 
     render(){
         return (
         <div className="dash">
             <Form
-                projects={this.state.project}
+                projects={this.state}
                 updateProject={this.updateProject}
                 changeHandler={this.changeHandler}
             />
-            {console.log("Current state being passed to svg", this.state.prediction)}
+            {/* {console.log("Current state right now", this.state)} */}
             <Prediction
-                data={this.state.prediction}
+                data={this.state}
             />
         </div>
     );}
